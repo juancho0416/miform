@@ -1,0 +1,29 @@
+@page
+@model form.Pages.ThirdModel
+@{
+    ViewData["Title"] = "Resumen";
+}
+
+<h2>Resumen de selección</h2>
+
+<div class="card p-3 mb-3">
+    <p><strong>Area:</strong>@Model.Area</p>
+    <p><strong>Empresa:</strong>@Model.Empresa</p>
+    <p><strong>Nombre del titular:</strong>@Model.Nombre</p>
+    <p><strong>RFC:</strong>@Model.RFC</p>
+    <p><strong>CURP:</strong>@Model.CURP</p>
+    <p><strong>NOM:</strong>@Model.NOM</p>
+    <p><strong>ISO:</strong>@Model.ISO</p>
+    <p><strong>Requerimiento:</strong>@Model.Requerimiento</p>
+    <p><strong>Archivo:</strong>@Model.Archivo</p>
+
+
+</div>
+
+<form method="post">
+
+    <button type="submit" class="btn btn-primary">
+        Confirmar
+        y finalizar</button>
+    <a asp-page="/Second" class="btn btn-secondary ms-2">Volver</a>
+</form>

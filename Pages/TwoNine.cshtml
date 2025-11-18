@@ -1,0 +1,81 @@
+@page
+@model form.Pages.TwoNineModel
+
+<h2>Subir documento</h2>
+
+<form method="post" enctype="multipart/form-data" asp-page-handler="Upload" id="uploadForm" novalidate>
+    <div class="mb-3">
+        <label for="archivo" class="form-label">Archivo (.json, .xml, .pdf)</label>
+        <input asp-for="Archivo" class="form-control" type="file" id="archivo" accept=".json,.xml,.pdf" />
+        <span asp-validation-for="Archivo" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Subir</button>
+</form>
+
+<!-- Modal -->
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="uploadModalLabel">Resultado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body" id="uploadModalBody">
+                @Html.Raw(TempData["UploadMessage"] ?? "")
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (function () {
+            const allowed = ['.json', '.xml', '.pdf'];
+            const fileInput = document.getElementById('archivo');
+            const form = document.getElementById('uploadForm');
+
+            form.addEventListener('submit', function (e) {
+                const f = fileInput.files[0];
+                if (!f) {
+                    e.preventDefault();
+                    showModal('Seleccione un archivo.');
+                    return;
+                }
+                const ext = '.' + f.name.split('.').pop().toLowerCase();
+                if (!allowed.includes(ext)) {
+                    e.preventDefault();
+                    showModal('Formato no permitido. Use .json, .xml o .pdf');
+                    return;
+                }
+                // tamaño máximo del archivo 10MB
+                const maxSize = 10 * 1024 * 1024;
+                if (f.size > maxSize) {
+                    e.preventDefault();
+                    showModal('Archivo demasiado grande. Máximo 10 MB.');
+                    return;
+                }
+            });
+
+            function showModal(msg) {
+                document.getElementById('uploadModalBody').textContent = msg;
+                var m = new bootstrap.Modal(document.getElementById('uploadModal'));
+                m.show();
+            }
+
+
+            @if (TempData["ShowUploadModal"] != null && (bool)TempData["ShowUploadModal"])
+                {
+                    <text>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var m = new bootstrap.Modal(document.getElementById('uploadModal'));
+                        m.show();
+                              });
+                    </text>
+            }
+                                     })();
+    </script>
+}

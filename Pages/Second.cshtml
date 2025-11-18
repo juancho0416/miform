@@ -1,0 +1,55 @@
+@page
+@model form.Pages.SecondModel
+@{
+    ViewData["Title"] = "Formulario";
+}
+
+<h1>Formulario para validaciones</h1>
+<hr class="red">
+</hr>
+
+<form method="post" novalidate>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Input.Nombre" class="form-label">Nombre del titular</label>
+        <input asp-for="Input.Nombre" class="form-control" type="text" placeholder="Ingrese el nombre del titular" />
+        <span asp-validation-for="Input.Nombre" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.RFC" class="form-label">RFC</label>
+        <input asp-for="Input.RFC" class="form-control" type="text" placeholder="Ingrese RFC" />
+        <span asp-validation-for="Input.RFC" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.CURP" class="form-label">CURP</label>
+        <input asp-for="Input.CURP" class="form-control" type="text" placeholder="Ingrese su CURP" />
+        <span asp-validation-for="Input.CURP" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Input.Folio" class="form-label">Folio</label>
+        <input asp-for="Input.Folio" class="form-control" type="text" placeholder="Ingrese su folio" />
+        <span asp-validation-for="Input.Folio" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Input.Phone" class="form-label">Telefono</label>
+        <input asp-for="Input.Phone" class="form-control" type="text" placeholder="Ingrese su numero de telefono" />
+        <span asp-validation-for="Input.Phone" class="text-danger"></span>
+    </div>
+    <form method="post" asp-page-handler="Enviar">
+        <button type="submit" class="btn btn-primary pull-right">Enviar</button>
+    </form>
+
+    <form method="post" asp-page-handler="Volver">
+        <a asp-page="/Index" class="btn btn-secondary ms-2">Volver</a>
+
+    </form>
+
+</form>
+<partial name="_ValidationScriptsPartial" />
+
+@* Scripts *@
+
+<script src="/form/wwwroot/js/site.js"></script>
