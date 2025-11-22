@@ -19,7 +19,7 @@ public class IndexModel : PageModel
         }
 
         // Redirige a la pagina 3 y se le agregan estos campos de ke han sido completados 
-        return RedirectToPage("Second");
+        return RedirectToPage("ZeroSecond");
     }
 
     public class LoginInput

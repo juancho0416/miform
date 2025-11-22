@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formBeta\\form.csproj": {}
+    "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formbeta\\form.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formBeta\\form.csproj": {
+    "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formbeta\\form.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formBeta\\form.csproj",
+        "projectUniqueName": "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formbeta\\form.csproj",
         "projectName": "form",
-        "projectPath": "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formBeta\\form.csproj",
+        "projectPath": "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formbeta\\form.csproj",
         "packagesPath": "C:\\Users\\jmartinezg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formBeta\\obj\\",
+        "outputPath": "C:\\Users\\jmartinezg\\OneDrive - Comisión Nacional de Energía\\Escritorio\\Nueva carpeta\\formbeta\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

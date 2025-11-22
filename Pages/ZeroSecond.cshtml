@@ -1,0 +1,39 @@
+@page
+@model form.Pages.ZeroSecond
+
+@{
+    ViewBag.Title = "Seleccion de fecha";
+}
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/Index"><i class="icon icon-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="/index">Inicio</a></li>
+    <li class="breadcrumb-item"><a href="/Index">Login</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="/ZeroSecond">Seleccion de fecha</a></li>
+</ol>
+<h1>Seleccion de fecha</h1>
+<hr class="red">
+</hr>
+<form method="post">
+    <div class="form-group datepicker-group">
+        <label asp-for="Input.Fecha" class="control-label" for="calendarYear">Calendario:</label>
+        <input asp-for="Input.Fecha" class="form-control" id="calendarYear" type="text">
+        <span class="bootstrap-icons" aria-hidden="true"><i class="bi bi-calendar"></i></span>
+        <span asp-validation-for="Input.Fecha" class="text-danger"></span>
+    </div>
+    <form method="post" asp-page-handler="Enviar">
+        <button type="submit" class="btn btn-primary pull-right">Enviar</button>
+    </form>
+
+    <form method="post" asp-page-handler="Volver">
+        <a asp-page="/Index" class="btn btn-secondary ms-2">Volver</a>
+
+    </form>
+</form>
+
+@section Scripts {
+    <script>
+        $gmx(document).ready(function () {
+            $('#calendarYear').datepicker({ changeYear: true });
+        });
+    </script>
+}

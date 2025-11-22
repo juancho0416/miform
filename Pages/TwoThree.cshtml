@@ -1,0 +1,26 @@
+@page
+@model form.Pages.TwoThreeModel
+@{
+    ViewData["Title"] = "Resumen";
+}
+
+<h2>Resumen de selección</h2>
+<hr class="red">
+</hr>
+
+<div class="card p-3 mb-3">
+    <p><strong>Archivos cargados:</strong></p>
+
+    <p><strong>Archivo 1:</strong>@Model.Archivo</p>
+    <p><strong>Archivo 2:</strong>@Model.Archivo</p>
+    <p><strong>Archivo 3:</strong>@Model.Archivo</p>
+    <p><strong>Archivo 4:</strong>@Model.Archivo</p>
+</div>
+
+<form method="post">
+
+    <button type="submit" class="btn btn-primary">
+        Confirmar
+        y finalizar</button>
+    <a asp-page="/TwoNine" class="btn btn-secondary ms-2">Volver</a>
+</form>

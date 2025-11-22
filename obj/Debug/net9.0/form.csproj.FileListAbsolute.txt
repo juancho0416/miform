@@ -193,4 +193,5 @@ C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva c
 C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\formBeta\obj\Debug\net9.0\ref\form.dll
 C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\formBeta\obj\Debug\net9.0\form.sourcelink.json
 C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\formBeta\obj\Debug\net9.0\compressed\dcoeg896jo-znd40m68pu.gz
-C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\formBeta\obj\Debug\net9.0\compressed\27ymmyg3lm-vhbbokmcdx.gz
+C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\formBeta\obj\Debug\net9.0\compressed\w2ffwzvibq-cgrjlxvxgy.gz
+C:\Users\jmartinezg\OneDrive - Comisión Nacional de Energía\Escritorio\Nueva carpeta\formBeta\obj\Debug\net9.0\compressed\27ymmyg3lm-qjt5kkyyej.gz

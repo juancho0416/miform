@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace form.Pages;
 
-public class TwoFive : PageModel
+public class TwoFiveModel : PageModel
 {
 
 
@@ -31,12 +31,16 @@ public class TwoFive : PageModel
         TempData["ISO"] = Input.ISO;
         TempData["NOM"] = Input.NOM;
         TempData["Contrato"] = Input.Contrato;
+        TempData["Solicitud"] = Input.Solicitud;
         TempData["Requerimiento"] = Input.Requerimiento;
+        TempData["Permiso"] = Input.Permiso;
+        TempData["Peticion"] = Input.Peticion;
+
         // TempData["Archivo"] = Input.Archivo;
 
 
-        // Redirige a la pagina 3 y se le agregan estos campos de ke han sido completados 
-        return RedirectToPage("TwoNine");
+        // Redirige  a third
+        return RedirectToPage("ThirdTwo");
 
 
     }
@@ -55,7 +59,9 @@ public class TwoFive : PageModel
         [Required(ErrorMessage = "Es necesario seleccionar una ISO")]
         [Display(Name = "ISO")]
         public string ISO { get; set; } = string.Empty;
-
+        [Required(ErrorMessage = "Es necesario seleccionar una NMX")]
+        [Display(Name = "NMX")]
+        public string NMX { get; set; } = string.Empty;
         [Required(ErrorMessage = "Es necesario seleccionar un contrato")]
         [Display(Name = "Contrato")]
         public string Contrato { get; set; } = string.Empty;
@@ -63,10 +69,9 @@ public class TwoFive : PageModel
         [Required(ErrorMessage = "Es necesario seleccionar una empresa")]
         [Display(Name = "Empresa")]
         public string Empresa { get; set; } = string.Empty;
-
-        // [Required(ErrorMessage = "Es necesario seleccionar un archivo")]
-        // [Display(Name = "Archivo")]
-        // public string Archivo { get; set; } = string.Empty;
+        [Required(ErrorMessage = "Es necesario seleccionar una solicitud")]
+        [Display(Name = "Solicitud")]
+        public string Solicitud { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Es necesario seleccionar un requerimiento")]
         [Display(Name = "Requerimiento")]
@@ -79,10 +84,11 @@ public class TwoFive : PageModel
         [Required(ErrorMessage = "Es necesario seleccionar una peticion")]
         [Display(Name = "Peticion")]
         public string Peticion { get; set; } = string.Empty;
+
         ///para guardar en db
         // [ActionName("Enviar")]
         // public IActionResult OnPostEnviar()
-        // { }   
+        // { }
     }
 
 }

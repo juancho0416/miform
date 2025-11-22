@@ -4,7 +4,13 @@
     ViewData["Title"] = "Formulario";
 }
 
-<h1>Formulario para validaciones</h1>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/Index"><i class="icon icon-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="/Second">Login</a></li>
+    <li class="breadcrumb-item"><a href="/ZeroSecond">Seleccion de fecha</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="/Second">Datos</a></li>
+</ol>
+<h1>Datos</h1>
 <hr class="red">
 </hr>
 
@@ -16,27 +22,115 @@
         <input asp-for="Input.Nombre" class="form-control" type="text" placeholder="Ingrese el nombre del titular" />
         <span asp-validation-for="Input.Nombre" class="text-danger"></span>
     </div>
-    <div class="mb-3">
-        <label asp-for="Input.RFC" class="form-label">RFC</label>
-        <input asp-for="Input.RFC" class="form-control" type="text" placeholder="Ingrese RFC" />
-        <span asp-validation-for="Input.RFC" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Input.CURP" class="form-label">CURP</label>
-        <input asp-for="Input.CURP" class="form-control" type="text" placeholder="Ingrese su CURP" />
-        <span asp-validation-for="Input.CURP" class="text-danger"></span>
-    </div>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label asp-for="Input.RFC" class="form-label">RFC</label>
+                <input asp-for="Input.RFC" class="form-control" type="text" placeholder="Ingrese RFC" />
+                <span asp-validation-for="Input.RFC" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.CURP" class="form-label">CURP</label>
+                <input asp-for="Input.CURP" class="form-control" type="text" placeholder="Ingrese su CURP" />
+                <span asp-validation-for="Input.CURP" class="text-danger"></span>
+            </div>
 
-    <div class="mb-3">
-        <label asp-for="Input.Folio" class="form-label">Folio</label>
-        <input asp-for="Input.Folio" class="form-control" type="text" placeholder="Ingrese su folio" />
-        <span asp-validation-for="Input.Folio" class="text-danger"></span>
-    </div>
+            <div class="mb-3">
+                <label asp-for="Input.Cliente" class="form-label">Denominacion o razon social</label>
+                <input asp-for="Input.Cliente" class="form-control" type="text"
+                    placeholder="Ingrese el nombre de la empresa" />
+                <span asp-validation-for="Input.Cliente" class="text-danger"></span>
+            </div>
+            <h3>Domicilio</h3>
+            <hr />
+            <div class="mb-3">
+                <label asp-for="Input.Estado" class="form-label">Estado</label>
+                <select asp-for="Input.Estado" class="form-select">
+                    <option value="">--Seleccione un estado--</option>
+                    <option value="Aguascalientes">Aguascalientes</option>
+                    <option value="Baja California">Baja California</option>
+                    <option value="Baja California Sur">Baja California Sur</option>
+                    <option value="Campeche">Campeche</option>
+                    <option value="Chiapas">Chiapas</option>
+                    <option value="Chihuahua">Chihuahua</option>
+                    <option value="Ciudad de México">Ciudad de México</option>
+                    <option value="Coahuila">Coahuila</option>
+                    <option value="Colima">Colima</option>
+                    <option value="Durango">Durango</option>
+                    <option value="Estado de México">Estado de México</option>
+                    <option value="Guanajuato">Guanajuato</option>
+                    <option value="Guerrero">Guerrero</option>
+                    <option value="Hidalgo">Hidalgo</option>
+                    <option value="Jalisco">Jalisco</option>
+                    <option value="Michoacán">Michoacán</option>
+                    <option value="Morelos">Morelos</option>
+                    <option value="Nayarit">Nayarit</option>
+                    <option value="Nuevo León">Nuevo León</option>
+                    <option value="Oaxaca">Oaxaca</option>
+                    <option value="Puebla">Puebla</option>
+                    <option value="Querétaro">Querétaro</option>
+                    <option value="Quintana Roo">Quintana Roo</option>
+                    <option value="San Luis Potosí">San Luis Potosí</option>
+                    <option value="Sinaloa">Sinaloa</option>
+                    <option value="Sonora">Sonora</option>
+                    <option value="Tabasco">Tabasco</option>
+                    <option value="Tamaulipas">Tamaulipas</option>
+                    <option value="Tlaxcala">Tlaxcala</option>
+                    <option value="Veracruz">Veracruz</option>
+                    <option value="Yucatán">Yucatán</option>
+                    <option value="Zacatecas">Zacatecas</option>
+                </select>
+                <span asp-validation-for="Input.Estado" class="text-danger"></span>
+            </div>
 
-    <div class="mb-3">
-        <label asp-for="Input.Phone" class="form-label">Telefono</label>
-        <input asp-for="Input.Phone" class="form-control" type="text" placeholder="Ingrese su numero de telefono" />
-        <span asp-validation-for="Input.Phone" class="text-danger"></span>
+            <div class="mb-3">
+                <label asp-for="Input.Municipio" class="form-label">Municipio</label>
+                <select asp-for="Input.Municipio" class="form-select" id="municipioSelect">
+                    <option value="">--Seleccione un municipio--</option>
+                </select>
+                <span asp-validation-for="Input.Municipio" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Calle" class="form-label">Calle</label>
+                <input asp-for="Input.Calle" class="form-control" type="text"
+                    placeholder="Ingrese el nombre de la calle " />
+                <span asp-validation-for="Input.Calle" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Numero" class="form-label">Numero</label>
+                <input asp-for="Input.Numero" class="form-control" type="text"
+                    placeholder="Ingrese el numero del domicilio" />
+                <span asp-validation-for="Input.Numero" class="text-danger"></span>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label asp-for="Input.Folio" class="form-label">Folio</label>
+                <input asp-for="Input.Folio" class="form-control" type="text" placeholder="Ingrese su folio" />
+                <span asp-validation-for="Input.Folio" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Telefono" class="form-label">Telefono</label>
+                <input asp-for="Input.Telefono" class="form-control" type="text"
+                    placeholder="Ingrese su numero de telefono" />
+                <span asp-validation-for="Input.Telefono" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Input.Calle" class="form-label">Calle</label>
+                <input asp-for="Input.Calle" class="form-control" type="text"
+                    placeholder="Ingrese el nombre de la calle " />
+                <span asp-validation-for="Input.Calle" class="text-danger"></span>
+            </div>
+
+
+        </div>
     </div>
     <form method="post" asp-page-handler="Enviar">
         <button type="submit" class="btn btn-primary pull-right">Enviar</button>
@@ -53,3 +147,29 @@
 @* Scripts *@
 
 <script src="/form/wwwroot/js/site.js"></script>
+@section Scripts {
+    <script>
+        document.getElementById('Input_Estado').addEventListener('change', function () {
+            const estado = this.value;
+            const municipioSelect = document.getElementById('municipioSelect');
+
+            if (!estado) {
+                municipioSelect.innerHTML = '<option value="">--Seleccione un municipio--</option>';
+                return;
+            }
+
+            fetch(`?handler=GetMunicipios&estado=${encodeURIComponent(estado)}`)
+                .then(r => r.json())
+                .then(municipios => {
+                    municipioSelect.innerHTML = '<option value="">--Seleccione un municipio--</option>';
+                    municipios.forEach(m => {
+                        const opt = document.createElement('option');
+                        opt.value = m;
+                        opt.textContent = m;
+                        municipioSelect.appendChild(opt);
+                    });
+                })
+                .catch(e => console.error('Error:', e));
+        });
+    </script>
+}

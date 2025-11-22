@@ -1,0 +1,32 @@
+@page
+@model form.Pages.ThirdTwoModel
+@{
+    ViewData["Title"] = "Resumen";
+}
+
+
+<h2>Resumen de selección</h2>
+
+<div class="card p-3 mb-3">
+    <p><strong>Area:</strong>@Model.Area</p>
+    <p><strong>Empresa:</strong>@Model.Empresa</p>
+    <p><strong>Denominacion o razon social:</strong>@Model.Cliente</p>
+    <p><strong>ISO:</strong>@Model.ISO</p>
+    <p><strong>NOM:</strong>@Model.NOM</p>
+    <p><strong>Contrato:</strong>@Model.Contrato</p>
+    <p><strong>Solicitud:</strong>@Model.Solicitud</p>
+    <p><strong>Requerimiento:</strong>@Model.Requerimiento</p>
+    <p><strong>Permiso:</strong>@Model.Permiso</p>
+    <p><strong>Peticion:</strong>@Model.Peticion</p>
+    <p><strong>Estado:</strong>@Model.Estado</p>
+    <p><strong>Municipio:</strong>@Model.Municipio</p>
+    <p><strong>Calle:</strong>@Model.Calle</p>
+    <p><strong>Numero:</strong>@Model.Numero</p>
+</div>
+<form method="post">
+
+    <button type="submit" class="btn btn-primary">
+        Confirmar
+        y finalizar</button>
+    <a asp-page="/TwoNine" class="btn btn-secondary ms-2">Volver</a>
+</form>
